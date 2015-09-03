@@ -1,0 +1,478 @@
+
+
+
+<!DOCTYPE html>
+<html class="wf-active">
+<!--  live-web40.prod2.cloud.cheggnet.com| twig:1.16.0 -->
+<head><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UgMEV1BADgQHXFFb"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:24,2:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,2:24,ee:"QJf3ax"}],9:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,2:24,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,2:24,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);</script>
+    <meta name="format-detection" content="telephone=no">
+    <title>Multivariable Calculus 7th Edition Chapter 16.9 Problem 12E Solution | Chegg.com</title>
+    <meta property="og:title" content="Chegg.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.chegg.com/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-12e-solution-9780538497879" />
+    <meta property="og:image" content="https://a248.e.akamai.net/static.chegg.com/s/_global/images/Chegg_75x75.png" />
+    <meta name=apple-itunes-app content="app-id=385758163">
+                <meta name="description" content="Access Multivariable Calculus 7th Edition Chapter 16.9 Problem 12E solution now. Our solutions are written by Chegg experts so you can be assured of the highest quality!" />
+            <meta name="keywords" content="multivariable calculus, 7th Edition, chapter 16.9, problem 12E, textbook solution, chegg" />
+            <meta name="apple-itunes-app" content="app-id=590279703" />
+        
+    <meta name="viewport" content="width=1024, maximum-scale=1" />
+    
+    
+
+    
+                <link rel="stylesheet" type="text/css" href="https://a248.e.akamai.net/static.chegg.com/_r/dbe6d3abdd66f41735145536eb0d5bd8.css" media="all" data-scope="global" />
+            <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Shadows+Into+Light" media="all" data-scope="global" />
+                <link rel="stylesheet" type="text/css" href="https://a248.e.akamai.net/static.chegg.com/_r/d7c67ee86893f9995ec2f7f5c9bb45e5.css" media="all" data-scope="content" />
+        <!--[if lt IE 9]>
+    <link rel="stylesheet" href="https://a248.e.akamai.net/static.chegg.com/s/_css/_global/ie.css" />
+    <![endif]-->
+    
+    <script type="text/javascript">
+        window.heap=window.heap||[],heap.load=function(t,e){window.heap.appid=t,window.heap.config=e;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+t+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(t){return function(){heap.push([t].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+        
+        heap.load('2495417586');
+        
+        heap.identify({
+            uvn: '83373e60b7621503a15a822293492c0c53ffb1f2cdd103.20454998'
+                        ,handle: 'dce4a391-589d-43d2-a58b-26af7f381370'
+                    });
+        
+        heap.clearEventProperties();
+        
+        heap.setEventProperties({
+            chgchkb_all_loggedIn: true,
+            chgchkb_all_experiments: 'A350B|A412B|A413C|A415B|A422B|P251E|A435B|A433B|A611D|A901A|A614A'
+        });
+    </script>    
+</head>
+<body class=" desktop  " >
+<div class="chg-body no-subnav header-nav">
+    <div class="chg-root"></div>
+    <div id="fb-root"></div>
+                        <div class="chg-hdr-v3 chg-header Chgsec_Nav">
+                <div class="chg-hdr-content">
+                    <a class="chg-logo" href="http://www.chegg.com/">Chegg</a>
+                    <div class="chg-hdr-navigation">
+                                <div class="navigation-menu">
+        <div class="nav-item books-item"><a class="nav-item-header" href="https://www.chegg.com/books#rentbuy">BOOKS</a>        <div class="carrot">
+                <div class="carrot-inner"></div>
+        </div><div class="hover-box books-hover-content single-box left"><div class="left-section hover-box-section "><div class="links-section"><a href="https://www.chegg.com/books#rentbuy">Rent / Buy Books</a><a href="https://www.chegg.com/books#sell">Sell books</a><a href="https://www.chegg.com/books#mybooks">My books</a></div></div></div></div><div class="nav-item study-item"><a class="nav-item-header" href="https://www.chegg.com/study">STUDY</a>        <div class="carrot">
+                <div class="carrot-inner"></div>
+        </div><div class="hover-box study-hover-content single-box left"><div class="left-section hover-box-section "><div class="links-section"><a href="https://www.chegg.com/study/tbs">Textbook Solutions</a><a href="https://www.chegg.com/study/qa">Q&A</a><a href="https://www.chegg.com/tutors">Tutors</a></div></div></div></div><div class="nav-item internships-item"><a class="nav-item-header" href="https://www.chegg.com/app/internships">INTERNSHIPS</a>        <div class="carrot">
+                <div class="carrot-inner"></div>
+        </div><div class="hover-box internships-hover-content single-box left"><div class="left-section hover-box-section "><div class="links-section"><a href="https://www.chegg.com/app/internships">Internships & Jobs</a><a href="https://www.chegg.com/career-center/explore">Career Profiles</a><a href="https://www.chegg.com/career-center/advice">Advice</a></div></div></div></div><div class="nav-item colleges-item"><a class="nav-item-header" href="https://www.chegg.com/schools">COLLEGES</a>        <div class="carrot">
+                <div class="carrot-inner"></div>
+        </div><div class="hover-box colleges-hover-content single-box left"><div class="left-section hover-box-section "><div class="links-section"><a href="https://www.chegg.com/schools">Explore</a><a href="https://www.chegg.com/admissions/college-matches">Matches</a><a href="https://www.chegg.com/admissions/college-list">My List</a><a href="https://www.chegg.com/admissions/advice">Advice</a></div></div></div></div><div class="nav-item scholarships-item"><a class="nav-item-header" href="https://www.chegg.com/scholarships">SCHOLARSHIPS</a>        <div class="carrot">
+                <div class="carrot-inner"></div>
+        </div><div class="hover-box scholarships-hover-content single-box left"><div class="left-section hover-box-section "><div class="links-section"><a href="https://www.chegg.com/scholarships">Matches</a><a href="https://www.chegg.com/scholarships#saved">My List</a></div></div></div></div><div class="nav-item play-item"><a class="nav-item-header" href="http://play.chegg.com">PLAY</a></div>
+        </div>
+        <div class="collapsed-item nav-item hidden">
+            <div class="nav-item-header collapsed-item-header added-margin">MORE</div>
+        <div class="right-arrow"></div>
+</div>
+                    </div>
+                    <div class="chg-hdr-right-section"></div>
+                    <div class="chg-hdr-search-box"></div>
+                </div>
+            </div>
+        <div class="chg-container  center-content">
+        <div class="chg-container-tower"></div>
+        <div class="chg-container-content">
+
+                
+            <!-- the stuff below is just to support some legacy things .. with the nav redesign comning up it will be gone -->
+        <div class="chg-global-nav chg-global-nav-css chg-global-nav-autosliding-disabled">
+            <a class="chg-global-nav-home track-nav-home-icon" href="https://www.chegg.com/">Home</a>
+            <div class="chg-global-nav-list">
+                <a class="chg-global-nav-list-item chg-global-nav-list-section-home track-nav-home" href="https://www.chegg.com/">Home</a>
+                <a class="chg-global-nav-list-item track-nav-books" href="https://www.chegg.com/my/books">Books</a>
+                                <div class="divider"></div>
+<div class="chg-global-nav-list-section">
+    <div class="section-header">STUDY</div>
+    <a class="chg-global-nav-list-item track-nav-solutions" href="https://www.chegg.com/solutions">Textbook Solutions</a>
+                <a class="chg-global-nav-list-item track-nav-qna" href="https://www.chegg.com/my/questions-and-answers">Q&amp;A</a>
+    		
+            <a class="chg-global-nav-list-item track-nav-live-tutors increased-bottom-margin" href="/tutors/online-now/Chegg-GPA">Tutors <span class="nav-list-new">NEW</span></a>
+    </div>                <div class="divider"></div>
+<div class="chg-global-nav-list-section">
+    <div class="section-header">CAREER CENTER</div>
+            <a class="chg-global-nav-list-item track-career-center" href="https://www.chegg.com/career-center/explore" title="Career Center">Careers</a>
+            <a class="chg-global-nav-list-item track-nav-internship increased-bottom-margin" href="https://www.chegg.com/app/internships">Internships</a>
+    </div>                <div class="divider"></div>
+                                <a class="chg-global-nav-list-item track-nav-admission" href="https://www.chegg.com/schools">Colleges</a>
+                                <a class="chg-global-nav-list-item track-nav-scholarships" href="https://www.chegg.com/scholarships">Scholarships</a>
+            </div>
+        </div>
+                <div class="chg-global-content">
+                <div class="chg-nav">
+</div>                                <div class="chg-content ">
+    
+			<div class="txt-2-small global-breadcrumb"><a href="https://www.chegg.com/">home</a> / <a href="https://www.chegg.com/homework-help">homework help</a> / <a href="https://www.chegg.com/homework-help/textbook-solutions">textbook solutions</a> / <a href="https://www.chegg.com/homework-help/textbook-solutions/math">math</a> / <a href="https://www.chegg.com/homework-help/textbook-solutions/math-calculus-s29">calculus</a> / <a href="https://www.chegg.com/homework-help/multivariable-calculus-solutions-4">multivariable calculus</a> / <a href="https://www.chegg.com/homework-help/multivariable-calculus-7th-edition-solutions-9780538497879">7th edition</a> / <a href="https://www.chegg.com/homework-help/multivariable-calculus-7th-edition-chapter-16.9-solutions-9780538497879">chapter 16.9</a> / problem 12e</div>
+<div id="solutionHeader" class="row">
+	<div class="solution-title-container col-12">
+					<h1 class="txt-hdr">
+				<span class="txt-hdr-top">Chegg Textbook Solutions for Multivariable Calculus 7th Edition Chapter 16.9 Problem 12E</span>
+			</h1>
+	</div>
+	
+	
+</div>
+<div class="soln-page-right-col col-4">
+	
+	
+	
+</div>
+<div id="solutionPlayer" class="row solution-player">
+	        	<div class="solution-nav solution-inner-nav">
+						<div class="solution-player-nav">
+			<div class="solution-player-nav-contents">
+				<div class="solution-player-nav-left">
+										<div class="solution-nav-dropdowns">
+						<span class="title">Chapter:</span>			<select class="player-chapter" name="playerChapter">
+				<option value='33271' >CHG</option><option value='33211' >CH10.R</option><option value='33205' >CH10.1</option><option value='33206' >CH10.2</option><option value='33207' >CH10.3</option><option value='33208' >CH10.4</option><option value='33209' >CH10.5</option><option value='33210' >CH10.6</option><option value='33223' >CH11.R</option><option value='33212' >CH11.1</option><option value='33213' >CH11.2</option><option value='33214' >CH11.3</option><option value='33215' >CH11.4</option><option value='33216' >CH11.5</option><option value='33217' >CH11.6</option><option value='33218' >CH11.7</option><option value='33219' >CH11.8</option><option value='33220' >CH11.9</option><option value='33221' >CH11.10</option><option value='33222' >CH11.11</option><option value='33230' >CH12.R</option><option value='33224' >CH12.1</option><option value='33225' >CH12.2</option><option value='33226' >CH12.3</option><option value='33227' >CH12.4</option><option value='33228' >CH12.5</option><option value='33229' >CH12.6</option><option value='33235' >CH13.R</option><option value='33231' >CH13.1</option><option value='33232' >CH13.2</option><option value='33233' >CH13.3</option><option value='33234' >CH13.4</option><option value='33244' >CH14.R</option><option value='33236' >CH14.1</option><option value='33237' >CH14.2</option><option value='33238' >CH14.3</option><option value='33239' >CH14.4</option><option value='33240' >CH14.5</option><option value='33241' >CH14.6</option><option value='33242' >CH14.7</option><option value='33243' >CH14.8</option><option value='33255' >CH15.R</option><option value='33245' >CH15.1</option><option value='33246' >CH15.2</option><option value='33247' >CH15.3</option><option value='33248' >CH15.4</option><option value='33249' >CH15.5</option><option value='33250' >CH15.6</option><option value='33251' >CH15.7</option><option value='33252' >CH15.8</option><option value='33253' >CH15.9</option><option value='33254' >CH15.10</option><option value='33265' >CH16.R</option><option value='33256' >CH16.1</option><option value='33257' >CH16.2</option><option value='33258' >CH16.3</option><option value='33259' >CH16.4</option><option value='33260' >CH16.5</option><option value='33261' >CH16.6</option><option value='33262' >CH16.7</option><option value='33263' >CH16.8</option><option value='33264' selected="selected">CH16.9</option><option value='33270' >CH17.R</option><option value='33266' >CH17.1</option><option value='33267' >CH17.2</option><option value='33268' >CH17.3</option><option value='33269' >CH17.4</option>
+			</select>
+						<span class="title">Problem:</span>			<select class="player-problem" name="playerProblem">
+				<option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-1e-solution-9780538497879' >1E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-2e-solution-9780538497879' >2E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-3e-solution-9780538497879' >3E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-4e-solution-9780538497879' >4E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-5e-solution-9780538497879' >5E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-6e-solution-9780538497879' >6E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-7e-solution-9780538497879' >7E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-8e-solution-9780538497879' >8E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-9e-solution-9780538497879' >9E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-10e-solution-9780538497879' >10E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-11e-solution-9780538497879' >11E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-12e-solution-9780538497879' selected="selected">12E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-13e-solution-9780538497879' >13E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-14e-solution-9780538497879' >14E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-15e-solution-9780538497879' >15E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-16e-solution-9780538497879' >16E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-17e-solution-9780538497879' >17E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-18e-solution-9780538497879' >18E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-19e-solution-9780538497879' >19E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-20e-solution-9780538497879' >20E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-21e-solution-9780538497879' >21E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-22e-solution-9780538497879' >22E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-23e-solution-9780538497879' >23E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-24e-solution-9780538497879' >24E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-25e-solution-9780538497879' >25E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-26e-solution-9780538497879' >26E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-27e-solution-9780538497879' >27E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-28e-solution-9780538497879' >28E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-29e-solution-9780538497879' >29E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-30e-solution-9780538497879' >30E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-31e-solution-9780538497879' >31E</option><option value='/homework-help/multivariable-calculus-7th-edition-chapter-16.9-problem-32e-solution-9780538497879' >32E</option>
+			</select>
+					</div>
+				</div>
+				<div class="solution-player-nav-right">
+					<div class="solution-player-buttons">
+						<!--
+						<span class="button print-btn">
+							<span class="icon">PR</span></span>
+						<span class="button q-and-a-btn">
+							<span class="icon">QA</span></span>
+						<span class="button bookmark-btn">
+							<span class="icon">BM</span></span>
+						-->
+
+						<button class="fullscreen-btn btn-secondary-sm">
+							<span class="icon">FS</span></button>
+					</div>
+				</div>
+				<div class="solution-player-nav-middle">
+					<div class="step-nav-buttons">
+						<button class="btn-secondary-sm prev-btn">&#x25b2;
+						</button><button class="btn-secondary-sm next-btn">&#x25bc;
+						</button>
+					</div>
+					<div class="solution-player-show-all">
+						<input type="checkbox" name="show-all" class="show-all" id="show-all" checked="checked" />
+						<label class="form-checkbox" for="show-all"></label>
+						<label class='show-all-label' for="show-all">show all steps</label>
+					</div>
+				</div>
+			</div>
+		</div>
+			</div>
+	<div class="problem-navigator">
+		<div class="next-problem"></div>
+		<div class="next-problem-label txt-2-small"></div>
+		<div class="prev-problem"></div>
+		<div class="prev-problem-label txt-2-small"></div>
+	</div>
+	
+
+	<div class="solution-header">
+		
+	</div>
+	
+	<div class="solution-steps">
+			<div class="solution-player-content">
+		<noscript>
+			<ul class="solution-player-steps">
+				<li>
+					<div class="txt-sec-dark">JavaScript Not Detected</div>
+					<div class="txt-body">JavaScript is required to view textbook solutions.</div>
+				</li>
+			</ul>
+		</noscript>
+		<ul class="solution-player-steps">
+						<li>
+				<span class="step-number"><span class="number">Step 1</span> of 4</span>
+				<div class="step-content ugc-base">
+					<div class="step-solution-content" src="http://s3.amazonaws.com/chegg-solutions/255732-1.png?AWSAccessKeyId=1B60CB4XS8NJR1Z2JC02&Expires=1430444406&Signature=ubvwjt7Iy4i9Z3jwwZYseF46VwE%3D">
+				</div>
+							<div class="step-comments">
+				<div class="comments-label clearfix">
+					<span class="comments-label-feedback link-body">Provide feedback (0)</span>
+				</div>
+				<ul class='comment-list'>
+					
+				</ul>
+			</div>
+			</li>			<li>
+				<span class="step-number"><span class="number">Step 2</span> of 4</span>
+				<div class="step-content ugc-base">
+					<div class="step-solution-content" src="http://s3.amazonaws.com/chegg-solutions/255732-2.png?AWSAccessKeyId=1B60CB4XS8NJR1Z2JC02&Expires=1430444406&Signature=nvrhVkGXA1i5LM7FE5YWJ%2BnqUjY%3D">
+				</div>
+							<div class="step-comments">
+				<div class="comments-label clearfix">
+					<span class="comments-label-feedback link-body">Provide feedback (0)</span>
+				</div>
+				<ul class='comment-list'>
+					
+				</ul>
+			</div>
+			</li>			<li>
+				<span class="step-number"><span class="number">Step 3</span> of 4</span>
+				<div class="step-content ugc-base">
+					<div class="step-solution-content" src="http://s3.amazonaws.com/chegg-solutions/255732-3.png?AWSAccessKeyId=1B60CB4XS8NJR1Z2JC02&Expires=1430444406&Signature=w540PSZgaVqrIQpYnyRSri5i234%3D">
+				</div>
+							<div class="step-comments">
+				<div class="comments-label clearfix">
+					<span class="comments-label-feedback link-body">Provide feedback (0)</span>
+				</div>
+				<ul class='comment-list'>
+					
+				</ul>
+			</div>
+			</li>			<li>
+				<span class="step-number"><span class="number">Step 4</span> of 4</span>
+				<div class="step-content ugc-base">
+					<div class="step-solution-content" src="http://s3.amazonaws.com/chegg-solutions/255732-4.png?AWSAccessKeyId=1B60CB4XS8NJR1Z2JC02&Expires=1430444406&Signature=%2BNi65OuYA2p%2Bow2FL3pUitrl3Bo%3D">
+				</div>
+							<div class="step-comments">
+				<div class="comments-label clearfix">
+					<span class="comments-label-feedback link-body">Provide feedback (1)</span>
+				</div>
+				<ul class='comment-list'>
+								<li>
+				<div class="comment-avatar">
+					<img src="/a/i/main/avatars/Chegg-avatar.png"/>
+				</div>
+				<div class="comment-body">
+					<div class="comment-info">
+						<span class="comment-username">ntjr29</span>
+					</div>
+					<div class="comment-text ugc-base">So, what happens to the 2 when you multiplied r^4cos(theta) into (rcos(theta) + 2) .. ? The second and third steps down.</div>
+					
+				</div>
+			</li>
+				</ul>
+			</div>
+			</li>
+		</ul>		
+	</div>
+	</div>
+
+	
+
+	
+	
+	
+	
+</div>
+
+	<!-- /homework-help page -->
+
+<img height="1" width="1" src="https://a.triggit.com/px?u=CK&rtv=hwhvisit">
+
+<!-- Google Code for Visited Chegg HWH Page -->
+<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1069256193;
+var google_conversion_label = "LZyaCK_uzAMQgZzu_QM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1069256193/?value=0&amp;label=LZyaCK_uzAMQgZzu_QM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+    		<div class="seo-content">
+			<h3 class="txt-hdr-mod">Get Study Help from Chegg</h3>
+			<p class="txt-body">
+				Chegg is one of the leading providers of homework help for college and high school students. Get homework help and answers to your toughest questions in math, calculus, algebra, physics, chemistry, science, accounting, English and more. Master your homework assignments with our step-by-step solutions to more than 3000 textbooks. If we don't support your textbook, don't worry! You can ask a homework question and get an answer in as little as two hours. With Chegg, homework help is just a few clicks away.
+			</p>
+		</div>
+</div>
+<div class="chg-footer">
+    <div class="chg-footer-pattern">
+        <div class="chg-footer-container">
+    <nav>
+        <div class="row">
+            <div class="col-12 col-first col-last">
+                <div class="chg-footer-nav">
+                    <div class="chg-footer-nav-column">
+                        <h4>ABOUT CHEGG</h4>
+                                                                                                                            <ul>
+                            <li><a href="https://www.chegg.com/mediacenter/" title="About Chegg" data-noajax=&quot;true&quot;>Media Center</a></li>
+                            <li><a rel="nofollow" href="http://blog.chegg.com/category/chegg-for-good/" title="Chegg For Good">Chegg For Good</a></li>
+                            <li><a rel="nofollow" href="https://www.chegg.com/brandpartner/" title="Brand Partnerships">Brand Partnerships</a></li>
+                            <li>
+                                                                <a rel="nofollow" href="https://www.chegg.com/privacypolicy/" title="Privacy Policy">Privacy Policy</a>
+                            </li>
+                            <li><a rel="nofollow" href="https://www.chegg.com/privacypolicy/#california" title="Your CA Privacy Rights">Your CA Privacy Rights</a></li>
+                            <li>
+                                                                <a rel="nofollow" href="https://www.chegg.com/termsofuse/" title="Terms of Use">Terms of Use</a>
+                            </li>
+                            <li><a rel="nofollow" href="https://www.chegg.com/generalpolicies/" title="General Policies">General Policies</a></li>
+                            <li><a rel="nofollow" href="https://www.chegg.com/copyright/" title="Intellectual Property Rights">Intellectual Property Rights</a></li>
+                                                            <li><a rel="nofollow" href="http://investor.chegg.com/" title="Investor Relations">Investor Relations</a></li>
+                                                        <li><a href="http://edu.chegg.com/" title="Enrollment Services">Enrollment Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="chg-footer-nav-column">
+                        <div class="footer-nav-blk">
+                            <h4>RESOURCES</h4>
+                            <ul>
+                                <li><a href="https://www.chegg.com/sitemap" title="Site Map">Site Map</a></li>
+                                <li><a href="https://www.chegg.com/mobile" title="Mobile" data-noajax="true" >Mobile</a></li>
+                                <li><a rel="nofollow" href="https://www.chegg.com/publishers" title="Publishers" data-noajax="true">Publishers</a></li>
+                                <li><a rel="nofollow" href="https://www.chegg.com/affiliatesignuppage/" title="Join Our Affiliate Program" data-noajax="true">Join Our Affiliate Program</a></li>
+                                <li><a rel="nofollow" href="http://preferences-mgr.truste.com/?pid=chegg01&aid=chegg_pub02&type=cheggdirect" target="_new" title="Advertising Choices" data-noajax>Advertising Choices</a></li>
+                            </ul>
+                            <h4 class="pub-resources">PUBLISHER PAGES</h4>
+                            <ul>
+                                <li><a href="https://www.chegg.com/mcgraw-hill" data-noajax="true" title="McGraw-Hill">McGraw-Hill</a></li>
+                                <li><a href="https://www.chegg.com/cengage" data-noajax="true" title="Cengage">Cengage</a></li>
+                                <li><a href="https://www.chegg.com/pearson" data-noajax="true" title="Pearson">Pearson</a></li>
+                                <li><a href="https://www.chegg.com/wiley" data-noajax="true" title="Wiley">Wiley</a></li>
+                                <li><a href="https://www.chegg.com/elsevier" data-noajax="true" title="Elsevier">Elsevier</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="chg-footer-nav-column">
+                        <div class="footer-nav-blk">
+                            <h4>TEXTBOOK LINKS</h4>
+                            <ul>
+                                <li><a rel="nofollow" href="https://www.chegg.com/my/account/returnbooks">Return Your Books</a></li>
+                                <li><a href="https://www.chegg.com/textbooks/" title="Rent Textbooks" data-noajax="true">Rent Textbooks</a></li>
+                                <li><a href="https://www.chegg.com/etextbooks" title="eTextbooks" data-noajax="true" >eTextbooks</a></li>
+                                <li><a href="https://www.chegg.com/used-textbooks" title="Used Textbooks">Used Textbooks</a></li>
+                                <li><a href="https://www.chegg.com/cheap-textbooks" title="Cheap Textbooks">Cheap Textbooks</a></li>
+                                <li><a href="https://www.chegg.com/college-textbooks" title="College Textbooks">College Textbooks</a></li>
+                                <li><a href="https://www.chegg.com/sell-textbooks" title="Sell Textbooks" data-noajax="true" class="sell-textbooks">Sell Textbooks</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="chg-footer-nav-column">
+                        <div class="footer-nav-blk">
+                            <h4>STUDENT SERVICES</h4>
+                            <ul>
+                                <li><a href="https://www.chegg.com/homework-help/" title="Chegg Study Help" data-noajax="true">Chegg Study Help</a></li>
+                                <li><a href="https://www.chegg.com/chegg-coupon" title="Chegg Coupon">Chegg Coupon</a></li>
+                                <li><a href="https://www.chegg.com/homework-help/solutions-manual" title="Solutions Manual" data-noajax="true" >Solutions Manual</a></li>
+                                <li><a href="https://www.chegg.com/scholarships" title="Scholarships" data-noajax="true" >Scholarships</a></li>
+                                                                    <li><a href="https://www.chegg.com/career-center/explore" title="Career Search" data-noajax="true">Career Search</a></li>
+                                                                <li><a href="/tutors" title="Online Tutoring">Online Tutoring</a></li>
+                                <li><a href="https://www.chegg.com/app/internships/" title="Internships" data-noajax="true">Internships</a></li>
+                                <li><a href="https://www.chegg.com/schools/" title="College Search" data-noajax="true">College Search</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="chg-footer-nav-column">
+                        <div class="footer-nav-blk">
+                            <h4>COMPANY</h4>
+                            <ul>
+                                                                <li><a href="http://blog.chegg.com/" title="Blog" data-noajax="true" >Chegg College Blog</a></li>
+                                <li><a href="https://www.chegg.com/jobs/" title="Jobs">Jobs</a></li>
+                                <li><a rel="nofollow" href="https://www.chegg.com/contactus/" title="Customer Service" data-noajax="true" >Customer Service</a></li>
+                                <li><a rel="nofollow" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#97;&#110;&#108;&#114;&#64;&#99;&#104;&#101;&#103;&#103;&#46;&#99;&#111;&#109;" title="Give Us Feedback" data-noajax="true" >Give Us Feedback</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <footer>
+        <div class="row chg-footer-copyright">
+            <div class="col-3 col-first">
+                <div class="img-chg-plant-tree" title="Chegg Plants Trees">Chegg Plants Trees</div>
+            </div>
+            <div class="col-6 chg-copyright">
+                <div class="chg-copyright-blk">
+                    <a rel="nofollow" href="http://www.paypal.com" title="PayPal" data-noajax="true" ><img src="https://a248.e.akamai.net/static.chegg.com/images/paypal_logo.gif" alt="PayPal" /></a>
+                    <a rel="nofollow" href="//privacy-policy.truste.com/click-with-confidence/wps/en/www.chegg.com/seal_m" title="TRUSTe online privacy certification" target="_blank" data-noajax="true" ><img width="200" style="border: none" src="https://a248.e.akamai.net/static.chegg.com/images/truste_seal_web_20130912.png" alt="TRUSTe online privacy certification"/></a>
+                    <a rel="nofollow" href="http://www.bbb.org/sanjose/business-reviews/books-textbooks-new-and-used/cheggcom-in-santa-clara-ca-238456" title="BBB" data-noajax="true" ><img src="https://a248.e.akamai.net/static.chegg.com/images/bbbseal1.gif" alt="BBB" /></a>
+                    <p>&#169; 2003-2015 Chegg Inc. All rights reserved.</p>
+                </div>
+            </div>
+            <div class="col-3 col-last">
+                <div title="Over 6 million trees planted" class="chg-mil-trees">Over 6 million trees planted</div>
+            </div>
+        </div>
+    </footer>
+</div>
+    </div>
+</div>
+</div>
+<div class="chg-global-screen-blocker"></div>
+</div>
+</div>
+</div>
+
+                    <script src="https://a248.e.akamai.net/static.chegg.com/_r/e6c473096aa4ffd3aa86ae4e67be6fbc.js"></script>
+                    <script src="//s.btstatic.com/tag.js#site=ce4UWiM"></script>
+    
+
+                    <script src="https://a248.e.akamai.net/static.chegg.com/_r/982644820dd40067e6569c4fbe73792e.js"></script>
+    <script>
+    C('global');
+    C.global.cachedJS["https://a248.e.akamai.net/static.chegg.com/_r/e6c473096aa4ffd3aa86ae4e67be6fbc.js"] = true
+C.global.cachedJS["//s.btstatic.com/tag.js#site=ce4UWiM"] = true
+C.global.cachedJS["https://a248.e.akamai.net/static.chegg.com/_r/982644820dd40067e6569c4fbe73792e.js"] = true;
+
+    C.global.csrfToken = '1919b268b41d5a5264e8d5cc55edb91c';
+C.global.staticBaseUrl = 'https://a248.e.akamai.net/static.chegg.com/';
+C.global.assetUrl = 'https://a248.e.akamai.net/static.chegg.com/assets/';
+C.global.coversBaseUrl = 'https://a248.e.akamai.net/static.chegg.com/';
+C.global.cheggSiteUrl = 'https://www.chegg.com/';
+C.global.cheggSiteSecureUrl = 'https://www.chegg.com/';
+C.global.errorImage = 'https://a248.e.akamai.net/static.chegg.com/covers2/imagenalarge.gif';
+C.global.liveSiteUrl = 'https://www.chegg.com/';
+C.global.cookieDomain = '.chegg.com';
+C.global.hasEverLoggedIn = '1';
+
+    C.global.userId = "e14854eadc8ffd1d2318ed10d596a8cb";
+
+C.global.userFirstName = '';
+C.global.userLastName =  '';
+C.global.userEmail =     'study103n@gmail.com';
+C.global.userAvatar =    'http://media.cheggcdn.com/media%2F10b%2F10b48339-43e5-42fe-afde-30bbcc8850a9%2F10302167_10152564227873045_3454383566724080117_n.jpg';
+C.global.userUuid =      'dce4a391-589d-43d2-a58b-26af7f381370';
+C.global.hasHwhSubscription = true;
+C.global.beacon = false;
+C.global.disableErrorhandling = false;
+C.global.version = '3.0';
+C('logger');
+C.logger.loadTime=1430444376.3887;
+C.logger.pageTrackId='513839409c0903647a6af52e795d3c55';
+C.global.showViewMobileSiteButton = false
+C.global.search = 0;
+C.global.minicart = false;
+C.global.instaEdu = true;
+C.global.activate3Cs = 0;
+C.global.navV16AutosuggestHeapEventIsActivated = '1';
+C.global.uuidChecksum = '3742bd60660100f72d9b842b12ea7cda28a8b1f27e0b9f3530a5ce005541dcee';
+C('global.cs');
+C.global.cs.heapFired = false;    $(function() {
+        C.global.pageObject = (function(){
+    return new C.page.textbooks_solutionsv2({"problemId":1413377,"isbn13":9780538497879,"solutionId":"255732","rootSelector":"#solutionPlayer","catalogItemIdForSolution":"2460","catalogItemIdForTextbook":"LBP-22250461","orderKey":null,"aggrCourse":false,"ads":{"slots":[{"width":642,"height":162,"ad_unit":"\/7223\/Chegg_Study_Integrated","html_element":"hwh-instaedu"}],"targets":{"hwh_sub":1,"degree":"MSN","school_type":"G","school_name":"Purdue University - Main Campus","g":null,"campus_id":1571284,"sch_yr":"fr","status":1,"clg_yr":2015,"mj":"a1974fb4-02c0-42a2-8270-00dbd25bbbf7","campus_name":"Purdue University","hwh_subj":"Calculus"}},"newBookPage":0,"newSolutionPage":0,"nonmemberChapterPage":0,"oldBookPage":null,"oldSolutionPage":1,"ctaBtn":"<a data-href=\"http:\/\/www.chegg.com\/shoppingcart\/add\/?redirect=hwh&command=SCP-3,5f4b7270-ca2b-4830-83e4-3ee1e87ef289,1\" data-type=\"button\" class=\"cta-button btn-primary-lg\" data-noajax=\"1\" href=\"http:\/\/www.chegg.com\/shoppingcart\/add\/?redirect=hwh&command=SCP-3,5f4b7270-ca2b-4830-83e4-3ee1e87ef289,1\">Join now<\/a>","bookTitle":"Multivariable Calculus","chapterNumber":"16.9","problemNumber":"12E","edition":"7th Edition","subjectIdForTutors":29,"subjectNameforTutors":"Calculus","isHighSchoolStudent":null,"expSimplifiedCSFlow":"simplified_checkout","subSubject":"Calculus","heapData":{"page_type":"ls_chgstdy_tbs_solution","event.name":"cheggstudy_entity_page_tracking","event.version":"1.0","chgstdy_subscription_status":"PAID","chgstdy_subscription_product_id":"SCP-5","chgent":"solution","chgentid":"255732","has_solution":true,"is_tbs_available":true},"isUnavailableTBS":null,"nonMemberTbsExp":true,"subjectName":"Math","subSubjectId":29,"adsListsItems":"","tbsAccessBlocked":true});	
+})();
+        if(typeof C.global.pageObject.postConstruct == 'function') {
+            C.global.pageObject.postConstruct();
+        }
+        C.global.pageOnload();
+
+        
+            });
+    // BrightTag requirement
+    $(window).load(function(){ $(window).trigger("navigatePage", [location.href, 'fresh']); });
+        var cheggPixel = new Image();
+    cheggPixel.src = 'https://www.chegg.com/_ajax/cheggpixel?js=1';
+</script>
+<noscript>
+    <img src="https://www.chegg.com/_ajax/cheggpixel?ns=1" />
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"0788ceb48b","applicationID":"677809","transactionName":"blRWMEYCWBJUAUALDVcedxFHF1kMGgFcBU9xXlkBQwxECl0HWBI9aV1VHVERRgBSB0c9MVZdQRBdDFg+YwtRFQ==","queueTime":0,"applicationTime":504,"ttGuid":"","agentToken":"","atts":"QhNVRg4YSxw=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-632.min.js"}</script></body>
+</html><!--   -->
