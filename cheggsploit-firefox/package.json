@@ -1,0 +1,13 @@
+{
+  "title": "CheggSploiter",
+  "name": "cheggsploiter",
+  "version": "0.0.1",
+  "description": "A simple automated addon to bypass the multiple user block for Chegg",
+  "main": "index.js",
+  "author": "Wyatt Dahlenburg",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT"
+}
