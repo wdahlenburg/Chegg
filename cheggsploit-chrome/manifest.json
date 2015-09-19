@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Cheggsploit",
+  "version": "0.1",
+    "content_scripts": [
+    {
+      "matches": [
+        "http://*.chegg.com/*", "https://*.chegg.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
